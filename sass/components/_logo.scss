@@ -1,0 +1,33 @@
+.main-nav__logo {
+  display: flex;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--excretion-color);
+  margin-right: 88px;
+
+  @media screen and (min-width:1200px) {
+    margin-right: 93px;
+  }
+}
+
+.main-nav__logo--black {
+  color: #000000;
+}
+
+.footer__logo {
+  display: flex;
+  justify-content: center;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--excretion-color);
+  // margin-right: 93px;
+  margin-bottom: 20px;
+}
+
+.footer__logo--white {
+  color: #ffffff;
+}

@@ -1,0 +1,147 @@
+
+.nav{
+    position: relative;
+
+    @media screen and (min-width:767px) {
+        display: none;
+    }
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    position: inherit;
+}
+
+.mobile__button{
+
+display: inline-flex;
+margin: 0;
+padding: 0;
+border: none;
+background-color: transparent;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &:hover,
+  &:focus {
+    fill: #188ce8;
+  }
+}
+
+
+
+.mobile__button .mobile__icon-cross{
+    display: none;
+}
+
+.mobile__button.is-open .mobile__icon-cross{
+    display: block;
+}
+
+.mobile__button.is-open .mobile__icon-menu{
+    display: none;
+}
+
+.mobile-nav{
+    
+    // position: absolute;
+    background-color: #fff;
+    top: 100%;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 48px;
+    padding-bottom: 48px;;
+    border-top: 1px solid #757575;
+
+
+    &.is-open{
+        display: block;
+    }
+
+    @media screen and (max-width:767px) {
+        display: none;
+    }
+}
+
+.mobile-decoration {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background-color: #fff;
+}
+
+.mobile-menu__item:not(:last-child){
+    
+    margin-bottom: 32px;
+}
+
+.mobile__bottom-block{
+    margin-bottom: 48px;
+}
+
+.mobile-menu__link{
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
+}
+
+.mobile-contacts__link-phone{
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.176;
+    letter-spacing: 0.02em;
+    color: var(--excretion-color);
+
+    @media screen and (min-width:480px) {
+        font-size: 34px;
+    }
+}
+
+.mobile-contacts__item-phone{
+    margin-bottom: 32px;
+}
+.mobile-contacts__item-mail{
+    margin-bottom: 64px;
+}
+
+.mobile-contacts__link-mail{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.166;
+    letter-spacing: 0.02em;
+    color: var(--contact-color);
+}
+
+.mobile-media{
+       display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-media__item{
+ 
+  padding-left: 10px;
+  padding-right: 10px;
+
+
+}
+
+.mobile-media__link{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.222;
+    letter-spacing: 0.02em;
+    color: var(--excretion-color);
+    
+}
