@@ -1,6 +1,7 @@
 
 .nav{
     position: relative;
+    overflow-y: scroll;
 
     @media screen and (min-width:767px) {
         display: none;
