@@ -284,6 +284,7 @@ img {
 :root {
   --text-color: #212121;
   --background-main: #fff;
+  --white-color: #fff;
   --background-footer: #2f303a;
   --excretion-color: #2196f3;
   --background-fon: #f5f4fa;
@@ -406,15 +407,45 @@ body {
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 528px;
-  min-height: 581px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 93px;
+  margin-bottom: 94px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+
+@media screen and (min-width: 320px) {
+  .modal {
+    max-width: 85vw;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    margin-top: 208px;
+    margin-bottom: 208px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 528px;
+    min-height: 581px;
+    margin: 0;
+  }
 }
 
 .modal__close {
@@ -446,6 +477,7 @@ body {
 
 .backdrop {
   position: fixed;
+  overflow-y: scroll;
   top: 0;
   bottom: 0;
   width: 100%;
@@ -639,10 +671,6 @@ body {
   margin-bottom: 32px;
 }
 
-.mobile__bottom-block {
-  margin-bottom: 48px;
-}
-
 .mobile-menu__link {
   font-weight: 500;
   font-size: 28px;
@@ -691,6 +719,14 @@ body {
   padding-right: 10px;
 }
 
+.mobile-media__item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mobile-media__item:not(:first-child) {
+  border-left: 1px solid rgba(33, 33, 33, 0.2);
+}
+
 .mobile-media__link {
   font-weight: 500;
   font-size: 14px;
@@ -722,7 +758,7 @@ body {
     padding-bottom: 200px;
     margin-left: auto;
     margin-right: auto;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/background-Img.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/background-1600.jpg);
   }
 }
 
@@ -1421,6 +1457,7 @@ body {
 }
 
 .form__text {
+  margin: 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -1476,9 +1513,10 @@ body {
 }
 
 .form__textarea {
-  width: 448px;
+  max-width: 448px;
   height: 120px;
   resize: none;
+  margin-bottom: 20px;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 16px;
@@ -1500,6 +1538,7 @@ body {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 30px;
   width: 200px;
   height: 50px;
   font-size: 16px;
@@ -1517,14 +1556,24 @@ body {
 }
 
 .form__checkbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 30px;
-  font-size: 14px;
+  text-align: center;
+  font-size: 12px;
   line-height: 1.71px;
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 480px) {
+  .form__checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .form__checkbox {
+    font-size: 14px;
+  }
 }
 
 .form__checkbox-block {

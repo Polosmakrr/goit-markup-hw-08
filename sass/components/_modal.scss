@@ -1,10 +1,33 @@
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 528px;
-  min-height: 581px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 93px;
+  margin-bottom: 94px;
+
+  @media screen and (min-width: 320px) {
+    max-width: 85vw;
+  }
+
+  @media screen and (min-width: 480px) {
+    max-width: 450px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-top: 208px;
+    margin-bottom: 208px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 528px;
+    min-height: 581px;
+    margin: 0;
+  }
+
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -20,6 +43,11 @@
   border-radius: 50%;
   background-color: #ffffff;
   border: 1px solid #0000001a;
+  // @media screen and (min-width: 480px) {
+  //   left: 410px;
+  // }
+  // position: absolute;
+  // right: 8px;
   &:hover,
   &:focus-within {
     background-color: #ffffff;

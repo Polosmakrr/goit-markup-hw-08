@@ -10,6 +10,7 @@
 }
 
 .form__text {
+  margin: 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -64,9 +65,10 @@
 }
 
 .form__textarea {
-  width: 448px;
+  max-width: 448px;
   height: 120px;
   resize: none;
+  margin-bottom: 20px;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 16px;
@@ -88,6 +90,7 @@
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 30px;
   width: 200px;
   height: 50px;
   font-size: 16px;
@@ -105,14 +108,20 @@
 }
 
 .form__checkbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 30px;
-  font-size: 14px;
+  text-align: center;
+  font-size: 12px;
   line-height: 1.71px;
   letter-spacing: 0.03em;
+
+  @media screen and (min-width: 480px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
 }
 
 .form__checkbox-block {
