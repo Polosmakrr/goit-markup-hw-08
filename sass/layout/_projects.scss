@@ -37,7 +37,9 @@
 }
 
 .projects__item:not(:last-child) {
-  margin-bottom: 30px;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 30px;
+  }
 }
 
 .projects__item:not(:nth-child(3n)) {
@@ -46,7 +48,7 @@
   }
 }
 
-.projects__item:not(:nth-last-child(-n + 3)) {
+.projects__item:not(:nth-child(n + 6)) {
   @media screen and (min-width: 1200px) {
     margin-bottom: 30px;
   }
